@@ -9,12 +9,14 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.gagandeep.myshapes.MainActivity"
+    tools:context="com.example.naveen.myshapes.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <View
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:id="@+id/triangle"
+        android:tag="blue"
         android:background="@drawable/triangle"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
@@ -24,6 +26,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/square"
+        android:tag="green"
         android:background="@drawable/square"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
@@ -34,16 +37,18 @@
     <View
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:tag="red"
         android:background="@drawable/circle"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/view" />
+        android:id="@+id/circle" />
 
     <FrameLayout
-        android:id="@+id/traingle"
+        android:id="@+id/star"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:tag="yellow"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
@@ -52,17 +57,27 @@
         <View
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:background="@drawable/triangle"
+            android:background="@drawable/star"
             />
         <View
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
             android:rotation="180"
-            android:background="@drawable/triangle"/>
+            android:background="@drawable/star"/>
 
     </FrameLayout>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/textView"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
